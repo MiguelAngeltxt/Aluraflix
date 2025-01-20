@@ -1,0 +1,25 @@
+.alertContainer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 18px;
+    border-radius: 6px;
+    color: #fff;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .alertContainer.success {
+    background-color: green;
+  }
+  
+  .alertContainer.error {
+    background-color: red;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

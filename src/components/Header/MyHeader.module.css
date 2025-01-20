@@ -1,0 +1,28 @@
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #2271d1;
+  }
+  
+  .logoImg {
+    height: 40px;
+  }
+  
+  .btnAdd {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btnAdd:hover {
+    background-color: #2271d1;
+    border-color: #2271d1;
+  }
+  

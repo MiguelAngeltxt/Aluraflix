@@ -1,0 +1,88 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1rem;
+  color: #fff;
+  border: 4px solid var(--Blue, #2271d1);
+  box-shadow: 0px 5px 29px 0px #2271d1b2;
+  gap: 20px;
+}
+
+.modalContent h2 {
+  /* font-family: Roboto; */
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 70.31px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modalContent p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  gap: 20px;
+}
+
+.modalContent form input,
+.modalContent form select,
+.modalContent form textarea {
+  padding: 0.5rem;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  background-color: #262626;
+  color: #a5a5a5;
+}
+
+.modalContent form input::placeholder,
+.modalContent form textarea::placeholder {
+  color: #a5a5a5;
+}
+
+.modalContent form textarea {
+  height: 100px;
+}
+
+.btnRow {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btnRow button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--Blue, #2271d1);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}

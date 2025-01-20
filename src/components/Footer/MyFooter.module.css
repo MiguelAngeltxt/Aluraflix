@@ -1,0 +1,10 @@
+.footerArea {
+    background-color: #262626;
+    text-align: center;
+    padding: 1rem;
+    border-top: 3px solid #2271d1;
+  }
+  .footerArea p {
+    color: #fff;
+  }
+  

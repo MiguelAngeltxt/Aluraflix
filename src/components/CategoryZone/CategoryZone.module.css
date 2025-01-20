@@ -1,0 +1,35 @@
+.categoryBlock {
+  width: 100%; /* Hace que cada categoría ocupe todo el ancho disponible */
+  overflow-x: hidden; /* Previene el desbordamiento si el scroll no se necesita */
+  padding: 1rem; /* Espacio interno de la categoría */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  display: flex;
+  flex-direction: row;
+}
+
+.catTitle {
+  color: #2271d1;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  width: 13%;
+}
+
+.scroller {
+  display: flex; /* Asegura que las cards se distribuyan en fila */
+  gap: 100px; /* Espacio entre las cards */
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  padding-bottom: 0.5rem;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  max-width: 100%; /* No deja que el contenedor se desborde */
+  height: 300px; /* Ajusta el tamaño vertical de la zona de cards */
+  scrollbar-width: thin;
+}
+
+.scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}

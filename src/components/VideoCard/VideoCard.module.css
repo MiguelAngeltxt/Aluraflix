@@ -1,0 +1,82 @@
+.cardWrap {
+  width: 100%;
+  max-width: 320px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Espacio reducido entre los elementos dentro de cada card */
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.iframeContainer {
+  width: 100%;
+  height: 180px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.iframeContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* El iframe está inicialmente oculto */
+  transition: opacity 0.3s ease;
+}
+
+/* El iframe solo se mostrará cuando el estado `showView` sea true en VideoCard */
+.iframeContainer.showIframe iframe {
+  opacity: 1;
+}
+
+.titleVid {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 6px; /* Espacio reducido entre la miniatura y el título */
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: space-around;
+  gap: 6px; /* Espacio reducido entre los botones */
+}
+
+.btnGroup button {
+  flex: 1;
+  background-color: #2271d1;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnGroup button:hover {
+  background-color: #1958a6;
+}
+
+/* Ajustes para el contenedor que agrupa todas las cards */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Espacio reducido entre las cards */
+  justify-content: center; /* Centra las cards */
+}

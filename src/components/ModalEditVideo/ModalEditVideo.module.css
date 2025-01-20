@@ -1,0 +1,101 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modalContent {
+  background-color: #262626;
+  border: 3px solid #6bd1ff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContent h2 {
+  text-align: center;
+  margin: 43px 0px;
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 70.31px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalContent form label {
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 20px;
+}
+
+.modalContent form input,
+.modalContent form select,
+.modalContent form textarea {
+  background: #262626;
+  border: 1px solid #6bd1ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modalContent form input::placeholder {
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.btnRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btnRow button {
+  background: #2271d1;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px;
+  text-align: center;
+  text-decoration-skip-ink: none;
+}
