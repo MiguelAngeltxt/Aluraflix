@@ -18,7 +18,7 @@ export default function Banner() {
     <section className={style.bannerBox}>
       <div className={style.overlay} />
       <div className={style.content}>
-        <h1>{firstFrontendVideo.titulo}</h1>
+        <h1>{firstFrontendVideo.titulo.toUpperCase()}</h1>
         <p>{firstFrontendVideo.descripcion}...</p>
       </div>
       <div className={style.videoWrapper}>
