@@ -4,7 +4,7 @@ import ModalEditVideo from "../ModalEditVideo/ModalEditVideo";
 import ModalViewVideo from "../ModalViewVideo/ModalViewVideo";
 import ModalConfirmDelete from "../ModalConfirmDelete/ModalConfirmDelete";
 
-export default function VideoCard({ data }) {
+export default function VideoCard({ data, category }) {
   const [showEdit, setShowEdit] = useState(false);
   const [showView, setShowView] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
@@ -17,8 +17,18 @@ export default function VideoCard({ data }) {
   // URL de la miniatura de alta resolución
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
+  // Definir colores para las cards según la categoría
+  const categoryColors = {
+    "front end": "#2271d1",
+    "back end": "#4caf50",
+    "innovación y gestión": "#ff9800",
+  };
+
   return (
-    <div className={styles.cardWrap}>
+    <div
+      className={styles.cardWrap}
+      style={{ borderColor: categoryColors[category] }}
+    >
       <div className={styles.iframeContainer} onClick={() => setShowView(true)}>
         {/* Miniatura de alta resolución */}
         <img src={thumbnailUrl} alt={titulo} className={styles.thumbnail} />
