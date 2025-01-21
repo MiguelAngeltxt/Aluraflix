@@ -1,50 +1,61 @@
 .bannerBox {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 500px; /* Aumento la altura para dar más espacio al iframe */
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Coloca contenido a la izquierda y video a la derecha */
   overflow: hidden;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
-  background-image: url("../../assets/banner.png"); /* Ruta correcta */
-  background-size: auto; /* Mantener el tamaño original de la imagen */
+  background-image: url("../../assets/banner.png");
+  background-size: auto;
   background-position: center;
-  width: 100%; /* Mantiene el ancho del overlay */
-  /* No establezcas una altura fija aquí, ya que será manejada dinámicamente en React */
+  width: 100%;
 }
 
 .content {
   position: relative;
   color: #fff;
   z-index: 2;
-  text-align: center;
-  margin-right: auto;
+  text-align: left; /* Alinea el texto a la izquierda */
   padding: 50px;
+  flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+  width: auto;
+  max-width: 50vw;
 }
 
 .content h1 {
   font-family: Roboto;
   font-size: 48px;
   font-weight: 800;
-  line-height: 56.25px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  margin-bottom: 30px;
+  max-width: 50vw;
 }
 
 .content p {
   font-family: Roboto;
   font-size: 24px;
   font-weight: 400;
-  line-height: 28px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  max-width: 50vw;
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Coloca el iframe en la esquina superior derecha */
+  z-index: 1;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+  border: none;
+  margin: 50px;
 }

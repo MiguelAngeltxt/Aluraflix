@@ -5,31 +5,31 @@ import { useVideoData } from "../../contexts/VideoDataContext";
 export default function Banner() {
   const { videosByCat } = useVideoData();
 
-  // Tomar primer video de la primer categoría con algo adentro
-  const allCats = Object.keys(videosByCat);
-  let firstVid = null;
-  for (let cat of allCats) {
-    if (videosByCat[cat].length > 0) {
-      firstVid = videosByCat[cat][0];
-      break;
-    }
-  }
+  // Tomar el primer video de la categoría "frontend"
+  const frontEndVideos = videosByCat["front end"];
+  const firstFrontendVideo =
+    frontEndVideos && frontEndVideos.length > 0 ? frontEndVideos[0] : null;
 
-  if (!firstVid) {
+  if (!firstFrontendVideo) {
     return <div className={style.bannerBox}>No hay videos</div>;
   }
 
   return (
-    <section
-      className={style.bannerBox}
-      style={{
-        backgroundImage: `url(${firstVid.img})`,
-      }}
-    >
+    <section className={style.bannerBox}>
       <div className={style.overlay} />
       <div className={style.content}>
-        <h1>{firstVid.categoria}</h1>
-        <p>{firstVid.descripcion?.slice(0, 100)}...</p>
+        <h1>{firstFrontendVideo.titulo}</h1>
+        <p>{firstFrontendVideo.descripcion}...</p>
+      </div>
+      <div className={style.videoWrapper}>
+        <iframe
+          title={firstFrontendVideo.titulo}
+          width="560"
+          height="315"
+          src={firstFrontendVideo.url}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
     </section>
   );
